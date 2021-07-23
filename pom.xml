@@ -9,6 +9,8 @@
 		<version>2.5.2</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
+	
+	
 	<groupId>com.example</groupId>
 	<artifactId>demo</artifactId>
 	<version>1.0</version>
@@ -16,6 +18,9 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<sonar.projectKey>hpcloud155_ajitbookapp</sonar.projectKey>
+  		<sonar.organization>hpcloud155</sonar.organization>
+  		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
 		<dependency>
