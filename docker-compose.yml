@@ -1,0 +1,21 @@
+version: "3.1"
+services:
+  bookapp:
+    build : .
+    depends_on :
+      - mysqldb
+    ports:
+      - 8082:8082 
+  mysqldb:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3308:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    volumes:
+      - type: volume
+        source: my-datavolume
+        target: /var/lib/mysql
+volumes:
+  my-datavolume:
